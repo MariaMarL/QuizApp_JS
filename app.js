@@ -9,10 +9,11 @@ const renderPage = (quiz, ui) => {
     ui.showScores(quiz.score);
   } else {
     console.log(quiz);
+    console.log(quiz.selectQuestion())
     ui.showQuestion(quiz.getQuestionIndex().text);
     ui.showProgress(quiz.questionIndex + 1, quiz.questions.length);
-    ui.showChoices(quiz.getQuestionIndex().choices, (currenChoice) => {
-      quiz.guess(currenChoice);
+    ui.showChoices(quiz.getQuestionIndex().choices, (currentChoice) => {
+      quiz.guess(currentChoice);
       renderPage(quiz, ui);
     });
   }
@@ -21,7 +22,6 @@ const renderPage = (quiz, ui) => {
 function main() {
   const quiz = new Quiz(questions);
   const ui = new UI();
-
   renderPage(quiz, ui);
 }
 
