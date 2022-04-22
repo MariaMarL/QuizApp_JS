@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background-color: #272343;
+  background-color: #233e43;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,9 +16,18 @@ body {
   background: #e3f6f5;
   width: 30rem;
   padding: 4rem;
-text-align: center;
+  text-align: center;
+  border-radius: .3rem;
 }
 
+#partial_score{
+  font-family: sans-serif;
+  padding: 3rem 1rem 0.1rem 1rem;
+  text-align: center;
+  border-color:#233e43 ;
+  border-radius: 1rem
+  
+}
 h1 {
   color: #57636e;
   font-size: 3rem;
@@ -26,6 +35,33 @@ h1 {
   padding: 2px 0px;
   border-radius: 50px;
 }
+
+.show_rules{
+  font-size: 1.3rem;
+  text-align: left;
+  justify-content: flex;
+}
+
+.menu_choices{
+  background-color: #34a3a3;
+  width: 50px;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 7px 30px;
+  margin: 500px 10px 50px 0px;
+  text-decoration: none;
+  align-items: left;
+  
+  
+}
+
+.menu_choices:hover{
+  cursor: pointer;
+  background-color:#57636e;
+
+}
+
 
 #question {
   font-family: sans-serif;
@@ -42,15 +78,23 @@ h1 {
   width: 250px;
   font-size: 20px;
   color: #fff;
-  border-radius: .3rem;
+  border-radius: 3rem;
   padding: 10px 20px;
-  margin: 10px 40px 10px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
+.quit{
+  border-color: #aa1b11 ;
+  background-color: #e62e21;
+  font-size: 14px;
+  width: 140px;
+  margin: 10px 40px 10px 40px;
+}
 #progress {
   color: #2b2b2b;
   font-size: 18px;
 }
+
 
 #btn0:hover,
 #btn1:hover,
