@@ -1,10 +1,12 @@
 //@ts-check
 import { Question } from "./Question.js";
 
+
 export class Quiz {
   score = 0;
   round = 1;
-  questionIndex = 0;
+  //questionIndex = 0;
+  randomQuestion = 0
 
   /**
    *
@@ -19,11 +21,12 @@ export class Quiz {
    * @returns {Question} the question found
    */
   getQuestionIndex() {
-    return this.questions[this.questionIndex];
+    return this.questions[this.randomQuestion];
   }
 
   isEnded() {
-    return this.questions.length === this.questionIndex;
+    //return this.questions.length === this.questionIndex;
+    return this.round > 5;
   }
   /**
    * 
@@ -34,17 +37,24 @@ export class Quiz {
     if (this.getQuestionIndex().correctAnswer(answer)) {
       this.score++;
       this.round++;
+      const element = document.getElementById("partial_score");
+      element.innerHTML = `Su puntaje actual es ${this.score}`;
+    }else{
+      this.round=6;
     }
-    this.questionIndex++;
+    //this.questionIndex++;
+    
   }
 
 
   selectQuestion(){
-  
+
     let max = (this.round*5);
     let min = (this.round*5)-5;
 
-    return (Math.floor((Math.random() * (max-min) + min)));
+    this.randomQuestion = Math.floor((Math.random() * (max-min) + min))
+
+    return this.randomQuestion;
 
   }
 }

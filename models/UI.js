@@ -30,13 +30,16 @@ export class UI {
 
   showScores(score) {
     const gameOverHTML = `
-      <h1>Result</h1>
-      <h2 id="score">Your scores: ${score}</h2>
+      <h1>Fin del juego</h1>
+      <h2 id="score">¡Su premio es: $${score*score*1000}!</h2>
       `;
     // <h2 id="score">Your scores: ${quiz.score}</h2>
 
     const element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
+
+    
+    
   }
 
   showProgress(currentIndex, total) {
