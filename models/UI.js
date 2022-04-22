@@ -28,10 +28,20 @@ export class UI {
     }
   }
 
+  buttonQuit(){
+    console.log("salir")
+    // const quit = document.getElementById("button_quit");
+    // quit.onmouseover = console.log("salir")
+  };
+
+  salir(){
+    console.log("Salir")
+  }
+
   showScores(score) {
     const gameOverHTML = `
       <h1>Fin del juego</h1>
-      <h2 id="score">¡Su premio es: $${score*score*1000}!</h2>
+      <h2 id="score">¡Su premio es: $${score*score*100000}!</h2>
       `;
     // <h2 id="score">Your scores: ${quiz.score}</h2>
 

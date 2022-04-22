@@ -38,7 +38,7 @@ export class Quiz {
       this.score++;
       this.round++;
       const element = document.getElementById("partial_score");
-      element.innerHTML = `Su puntaje actual es ${this.score}`;
+      element.innerHTML = `Su acumulado actual es $${this.score*this.score*100000}`;
     }else{
       this.round=6;
     }
@@ -46,6 +46,9 @@ export class Quiz {
     
   }
 
+  getScore(){
+    return this.score;
+  }
 
   selectQuestion(){
 

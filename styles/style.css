@@ -59,9 +59,9 @@ label{
   color: #fff;
   border-radius: 1rem;
   padding: 7px 30px;
-  margin: 500px 10px 50px 0px;
+  margin: 500px 45px 100px 10px;
   text-decoration: none;
-  align-items: left;
+  align-items: center;
   
   
 }
@@ -112,6 +112,10 @@ label{
 #btn3:hover {
   cursor: pointer;
   background-color: #57636e;
+}
+
+#button_quit:hover{
+ background-color: rgb(177, 6, 6);
 }
 
 #btn0:focus,

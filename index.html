@@ -16,8 +16,8 @@
       <h1 id="question"></h1>
 
       <div id="choices"></div>
-      <div id="partial_score"> Su puntaje actual es 0</div>
-      <input id="button_quit" class="button quit" type="button" value="Salir del juego" onClick="history.go(-1);">
+      <div id="partial_score"> Su acumulado actual es 0</div>
+      <button id="button_quit" class="button quit" type="button" onmouseover="buttonQuit()">Abandonar </button>
       <hr style="margin-top: 20px" />
 
       <footer>
@@ -27,5 +27,6 @@
 
     <!-- Scripts -->
     <script src="./app.js" type="module"></script>
+    <script src="./models/UI.js" type="module"></script>
   </body>
 </html>

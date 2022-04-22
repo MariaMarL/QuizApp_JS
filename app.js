@@ -6,7 +6,13 @@ import { questions } from "./data/questions.js";
 // Renderring the page
 const renderPage = (quiz, ui) => {
   if (quiz.isEnded()) {
+    ui.buttonQuit();
     ui.showScores(quiz.score);
+    // const retrievedString = localStorage.getItem("user")
+    // const parsedObj = JSON.parse(retrievedString)
+    // parsedObj.score = quiz.score
+    // const modified = JSON.stringify(parsedObj)
+    // localStorage.setItem("user", modified)
   } else {
     //console.log(quiz);
     quiz.selectQuestion();
