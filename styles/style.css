@@ -28,7 +28,10 @@ body {
   border-radius: 1rem
   
 }
-h1 {
+h1,
+h2,
+h3,
+label {
   color: #57636e;
   font-size: 3rem;
   text-align: center;
@@ -36,6 +39,13 @@ h1 {
   border-radius: 50px;
 }
 
+h1,
+h2,
+h3,
+label{
+
+  font-size:1.7rem;
+}
 .show_rules{
   font-size: 1.3rem;
   text-align: left;
@@ -109,4 +119,11 @@ h1 {
 #btn2:focus,
 #btn3:focus {
   outline: 0;
+}
+
+#username{
+  padding: 0.2rem 0.8rem;
+  margin: 1rem 0rem 2rem 0rem;
+ 
+
 }
