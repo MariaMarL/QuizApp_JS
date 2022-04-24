@@ -42,13 +42,11 @@ export class UI {
     const quitButton = document.querySelector("#button_quit")
     const saveData = new SaveData()
     let flag = false
-
     function quitButtonCallback() {
       flag = true
       if (flag) {
         saveData.saveToLocalStorage(quiz, TEMPORAL_KEY)
-        console.log("moved to home");
-        //window.location.href = "../home.html"
+        window.location.href = "../home.html"
       }
 
     }

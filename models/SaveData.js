@@ -44,7 +44,9 @@ class SaveData {
   extractImportantData(quiz, key) {
     const score = quiz.getScore()
     const nickname = localStorage.getItem(key)
-    return {nickname, score}
+    const date = new Date()
+    const dateNow = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+    return {nickname, score, dateNow }
   }
 
 
