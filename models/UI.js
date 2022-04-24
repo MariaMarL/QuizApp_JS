@@ -2,10 +2,11 @@ import SaveData from "./SaveData.js";
 
 export class UI {
   constructor() {}
+  
 
   /**
    *
-   * @param {sting} text
+   * @param {string} text
    */
   showQuestion(text) {
     const questionTitle = document.getElementById("question");
@@ -47,8 +48,9 @@ export class UI {
       if (flag) {
         saveData.saveToLocalStorage(quiz, TEMPORAL_KEY)
         console.log("moved to home");
-        window.location.href = "../home.html"
+        //window.location.href = "../home.html"
       }
+
     }
     quitButton.addEventListener('click', quitButtonCallback)
     return { quitButton, quitButtonCallback }
@@ -58,14 +60,12 @@ export class UI {
     const gameOverHTML = `
       <h1>Fin del juego</h1>
       <h2 id="score">¡Su premio es: $${score*score*100000}!</h2>
+      <a class="menu_choices" href="home.html"> Volver al inicio</a>
+      
       `;
-    // <h2 id="score">Your scores: ${quiz.score}</h2>
 
     const element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
-
-    
-    
   }
 
   showProgress(currentIndex, total) {

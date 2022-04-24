@@ -14,22 +14,15 @@ const renderPage = (quiz, ui) => {
   if (quiz.isEnded()) {
     // get nickname
     ui.showScores(quiz.score);
-    console.log("finished game");
     const saveData = new SaveData()
     // guardar objToSave
     saveData.saveToLocalStorage(quiz, TEMPORAL_KEY)
     console.log(saveData.getPreviousData());
-    // const parsedObj = JSON.parse(retrievedString)
-    // parsedObj.score = quiz.score
-    // const modified = JSON.stringify(parsedObj)
-    // localStorage.setItem("user", modified)
+    // saveData.showOnHistory()
   } else {
-    //console.log(quiz);
     quiz.selectQuestion();
-    // ui.showQuestion(quiz.getQuestionIndex().text);
     ui.showQuestion(quiz.getQuestionIndex().text);
     ui.showProgress(quiz.round, 5)
-    //ui.showProgress(quiz.questionIndex + 1, quiz.questions.length);
     const choicesCallback = (currentChoice) => {
       quiz.guess(currentChoice);
       renderPage(quiz, ui);

@@ -5,6 +5,7 @@ import { Question } from "./Question.js";
 export class Quiz {
   score = 0;
   round = 1;
+  
   //questionIndex = 0;
   randomQuestion = 0
 
@@ -41,6 +42,7 @@ export class Quiz {
       const element = document.getElementById("partial_score");
       element.innerHTML = `Su acumulado actual es $${this.score*this.score*100000}`;
     }else{
+      this.score = 0;
       this.round=6;
     }
     //this.questionIndex++;

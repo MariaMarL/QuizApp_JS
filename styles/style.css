@@ -28,6 +28,8 @@ body {
   border-radius: 1rem
   
 }
+
+
 h1,
 h2,
 h3,
@@ -54,17 +56,20 @@ label{
 
 .menu_choices{
   background-color: #34a3a3;
-  width: 50px;
+  width: 153px;
   font-size: 20px;
   color: #fff;
   border-radius: 1rem;
-  padding: 7px 30px;
-  margin: 500px 45px 100px 10px;
+  padding: 4px 15px;
+  margin: 1px 45px 1px 10px;
+  border-color:#34a3a3 ;
   text-decoration: none;
   align-items: center;
   
   
 }
+
+
 
 .menu_choices:hover{
   cursor: pointer;

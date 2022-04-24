@@ -1,7 +1,8 @@
 class SaveData {
   #previousData
   constructor() {
-    this.#previousData = []
+    this.#previousData = [];
+    this.record = []
   }
 
   getPreviousData() {
@@ -21,19 +22,30 @@ class SaveData {
   }
 
   saveToLocalStorage(quiz, TEMPORAL_KEY) {
-    const objToSave = this.#extractImportantData(quiz, TEMPORAL_KEY)
+    const objToSave = this.extractImportantData(quiz, TEMPORAL_KEY)
     const currentSave = this.readPreviousHistory()
     const newSave = [...currentSave, objToSave]
     const historyArray = JSON.stringify(newSave)
     localStorage.setItem('users', historyArray)
   }
+
+  showOnHistory(){
+    let recordPlayers= this.readPreviousHistory();
+    let recordsNumber = recordPlayers.length;
+    let lastFive;
+    if (recordsNumber<5){
+       lastFive = recordPlayers;
+    }else{
+       lastFive = recordPlayers.slice(recordPlayers.length-5, recordPlayers.length).reverse();
+    }
+    return lastFive
+  }
   
-  #extractImportantData(quiz, key) {
+  extractImportantData(quiz, key) {
     const score = quiz.getScore()
     const nickname = localStorage.getItem(key)
     return {nickname, score}
   }
-
 
 
   // example() {
